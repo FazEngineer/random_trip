@@ -1,0 +1,81 @@
+/* 🌟 Floating Search Box - FIXED */
+.overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0, -50%);
+    z-index: 3;
+    opacity: 1; /* Ensures visibility */
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Floating Menu Styling */
+.trip-container {
+    background-color: white;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* 🌄 Background Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* 🌍 Background Image */
+.background-image {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transform: translateX(10%);
+}
+
+/* 📌 Responsive Adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ✅ Floating menu remains visible */
+    .overlay-container {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        z-index: 2;
+        opacity: 1;
+    }
+
+    /* ✅ Background image fully below */
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        z-index: 1;
+    }
+
+    .background-image {
+        width: 100%;
+        transform: none;
+    }
+}
